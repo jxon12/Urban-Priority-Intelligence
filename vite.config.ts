@@ -18,6 +18,13 @@ export default defineConfig(({ mode }) => {
         alias: {
           '@': path.resolve(__dirname, '.'),
         }
+      },
+      // 在构建HTML时注入环境变量
+      transformIndexHtml: {
+        enforce: 'pre',
+        transform(html: string) {
+          return html.replace('%VITE_GOOGLE_MAPS_API_KEY%', env.VITE_GOOGLE_MAPS_API_KEY || '');
+        }
       }
     };
 });
