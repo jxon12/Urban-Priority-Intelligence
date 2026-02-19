@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPI - Urban Priority Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- 🔑 GOOGLE MAPS API SCRIPT 🔑
+         Replace YOUR_API_KEY_HERE with your actual Google Maps API key
+         Get your key from: https://console.cloud.google.com/apis/library/maps-backend.googleapis.com
+         Example: <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyWJOw5w-TypVrNxYi-dvo5XT8SK_1234&libraries=places"></script>
+    -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAB3QPDz63YnIR1WA6T3I8WOLGRaZkIC6g&libraries=places,geocoding"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'glow': 'glow 8s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0) scale(1)' },
+                            '50%': { transform: 'translateY(-20px) scale(1.02)' },
+                        },
+                        glow: {
+                            '0%, 100%': { opacity: 0.3, filter: 'blur(60px)' },
+                            '50%': { opacity: 0.6, filter: 'blur(100px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background: #000;
+            overflow-x: hidden;
+            color: #f5f5f7;
+            -webkit-font-smoothing: antialiased;
+        }
+        .ios-glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(40px) saturate(200%);
+            -webkit-backdrop-filter: blur(40px) saturate(200%);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.05);
+        }
+        .text-gradient {
+    background: linear-gradient(135deg, #007AFF 0%, #5856D6 100%);
+    -webkit-background-clip: text;
+    background-clip: text; /* <--- 加上这一行标准属性 */
+    -webkit-text-fill-color: transparent;
+}
+        .mesh-bg {
+            background-color: #000;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(0, 122, 255, 0.1) 0, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(88, 86, 214, 0.1) 0, transparent 50%);
+        }
+        ::-webkit-scrollbar {
+            width: 3px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@19.2.4",
+    "react-dom": "https://esm.sh/react-dom@19.2.4",
+    "react-dom/client": "https://esm.sh/react-dom@19.2.4/client",
+    "framer-motion": "https://esm.sh/framer-motion@12.34.0"
+  }
+}
+</script>
+</head>
+<body class="mesh-bg">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
