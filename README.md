@@ -115,8 +115,7 @@ If deployed at scale, UPI is designed to evolve into a comprehensive urban intel
 | Resource | Link |
 |---|---|
 | 🔗 Live Demo | [upi-spatial-clarity.vercel.app](https://upi-spatial-clarity.vercel.app) |
-| 🎥 Demo Video | *Coming Soon* |
-| 📘 Project Documentation | *Coming Soon* |
+| 🎥 Demo Video | [UPI demo video](https://youtu.be/Hvi58_Lrong?si=Y3KfJKyXyPRRVe6Y) |
 
 ---
 
